@@ -1,5 +1,29 @@
 {
   "dependencies": {
-    "express": "^5.1.0"
-  }
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "prisma": "^6.19.0"
+  },
+  "devDependencies": {
+    "@prisma/client": "^6.19.0"
+  },
+  "name": "tarea_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MArit67/Tarea_node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MArit67/Tarea_node/issues"
+  },
+  "homepage": "https://github.com/MArit67/Tarea_node#readme"
 }
