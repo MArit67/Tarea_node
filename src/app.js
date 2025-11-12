@@ -1,5 +1,6 @@
 import express from "express";
 import animal from "./routes/animal.js";
+import registro from "./controllers/registro.controller.js";
 
 const app = express();
 const PORT = 3000;
@@ -8,6 +9,7 @@ const PORT = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/registro", registro);
 app.use("/animal", animal);
 
 app.listen(PORT,()=>{
