@@ -1,13 +1,11 @@
-import { PrismaClient } from '../prismaClient.js';
-
-const prisma = new PrismaClient();
+import prisma from '../PrismaClient.js';
 
 // Crear una tarea
 export const createTask = async (req, res) => {
   try {
     const { title, userId } = req.body;
     const task = await prisma.task.create({
-      data: { title, userId },
+      data: { title, userId: parseInt(userId) },
       include: { user: true }
     });
     res.status(201).json(task);
@@ -66,7 +64,7 @@ export const updateTask = async (req, res) => {
     const { title, userId } = req.body;
     const task = await prisma.task.update({
       where: { id: parseInt(id) },
-      data: { title, userId },
+      data: { title, userId: parseInt(userId) },
       include: { user: true }
     });
     res.status(200).json(task);

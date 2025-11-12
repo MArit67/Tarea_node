@@ -1,6 +1,4 @@
-import { PrismaClient } from '../prismaClient.js';
-
-const prisma = new PrismaClient();
+import prisma from '../PrismaClient.js';
 
 // Crear un usuario
 export const createUser = async (req, res) => {
